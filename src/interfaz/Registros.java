@@ -15,11 +15,10 @@ import javax.swing.JTextField;
 public class Registros extends JFrame{
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private Interfaz i;
+	
 	
 	public Registros() {
-		i= new Interfaz();
+		//i= new Interfaz();
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 646, 417);
@@ -29,31 +28,29 @@ public class Registros extends JFrame{
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon(Registros.class.getResource("/interfaz/gemlogotransdefinitivopeque\u00F1o.png")));
-		lblNewLabel.setBounds(545, 11, 75, 42);
-		contentPane.add(lblNewLabel);
+		JLabel lblLogo = new JLabel("New label");
+		lblLogo.setIcon(new ImageIcon(Registros.class.getResource("/interfaz/gemlogotransdefinitivopeque\u00F1o.png")));
+		lblLogo.setBounds(545, 11, 75, 42);
+		contentPane.add(lblLogo);
 		
 		JLabel lblUser = new JLabel("Usuario :");
 		lblUser.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblUser.setBounds(40, 22, 75, 14);
 		contentPane.add(lblUser);
 		
-		textField = new JTextField();
-		textField.setBackground(Color.GRAY);
-		textField.setBounds(119, 22, 86, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		JLabel lblUsuarionombre = new JLabel();
+		lblUsuarionombre.setBackground(Color.GRAY);
+		lblUsuarionombre.setBounds(125, 25, 75, 14);
+		contentPane.add(lblUsuarionombre);
+		
+		JLabel lblCategoria = new JLabel("Categoria :");
+		lblCategoria.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblCategoria.setBounds(210, 15, 96, 28);
+		contentPane.add(lblCategoria);
+		
+		JLabel lblCategoria2 = new JLabel("");
+		lblCategoria2.setBounds(305, 25, 81, 14);
+		contentPane.add(lblCategoria2);
 		setVisible(true);
-	}
-
-	
-	public void nombreuser(String u) {	
-		
-			Interfaz i = new Interfaz();
-			i.pasardatos(textField.getText());
-			dispose();
-			
-		
 	}
 }

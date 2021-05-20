@@ -28,9 +28,10 @@ import java.awt.Toolkit;
 public class Interfaz extends JFrame {
 	
 	private JPanel miPanel;
-	private JTextField textUsuario;
+	private static JTextField textUsuario;
 	private JPasswordField passwordField;
-
+	public static Usuarios usuario=new Usuarios(textUsuario);
+		
 	public Interfaz() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Interfaz.class.getResource("/interfaz/gemlogotransdefinitivo1.png")));
 		setTitle("Gesti\u00F3n Empresarial");
@@ -114,6 +115,9 @@ public class Interfaz extends JFrame {
 									JOptionPane.showMessageDialog(null, "\n"
 											+ "Has ingresado correctamente al sistema",   "Mensaje de bienvenida",
 											JOptionPane.INFORMATION_MESSAGE);
+									
+									
+									Registros re=new Registros();
 								}else {
 									System.out.println("Nombre o contraseña incorrectos");
 								 
@@ -249,8 +253,5 @@ public class Interfaz extends JFrame {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-	}
-	public void pasardatos(String user) {
-		
 	}
 }
